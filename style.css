@@ -1,0 +1,307 @@
+/* ==========================
+   RESET
+========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0f172a;
+    color:white;
+    transition:.4s;
+}
+
+/* ==========================
+   NAVBAR
+========================== */
+
+header{
+    position:fixed;
+    width:100%;
+    top:0;
+    left:0;
+    background:#111827;
+    z-index:1000;
+    box-shadow:0 3px 10px rgba(0,0,0,.3);
+}
+
+nav{
+    width:90%;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    height:70px;
+}
+
+.logo{
+    color:#38bdf8;
+    font-size:28px;
+}
+
+.logo span{
+    color:#22c55e;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+#theme{
+    padding:10px;
+    border:none;
+    border-radius:50%;
+    cursor:pointer;
+    font-size:18px;
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:100px 10%;
+}
+
+.hero-text h1{
+    font-size:60px;
+    color:#38bdf8;
+}
+
+.hero-text h2{
+    margin:15px 0;
+}
+
+.hero-text p{
+    max-width:500px;
+    line-height:1.7;
+    margin-bottom:30px;
+}
+
+.btn{
+    background:#38bdf8;
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:30px;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#0ea5e9;
+}
+
+.hero-image img{
+    width:320px;
+    border-radius:50%;
+    border:6px solid #38bdf8;
+    box-shadow:0 0 30px #38bdf8;
+}
+
+/* ==========================
+   SECTIONS
+========================== */
+
+section{
+    padding:100px 10%;
+}
+
+section h2{
+    text-align:center;
+    margin-bottom:40px;
+    color:#38bdf8;
+    font-size:38px;
+}
+
+/* ==========================
+   CARDS
+========================== */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 20px #38bdf8;
+}
+
+/* ==========================
+   CONTACT
+========================== */
+
+form{
+    max-width:700px;
+    margin:auto;
+    display:flex;
+    flex-direction:column;
+}
+
+input,
+textarea{
+    margin:10px 0;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    font-size:16px;
+}
+
+textarea{
+    height:150px;
+    resize:none;
+}
+
+form button{
+    padding:15px;
+    background:#38bdf8;
+    color:white;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+form button:hover{
+    background:#0ea5e9;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#111827;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+.hero{
+    flex-direction:column;
+    text-align:center;
+}
+
+.hero-image img{
+    width:220px;
+    margin-top:40px;
+}
+
+nav ul{
+    display:none;
+}
+
+.hero-text h1{
+    font-size:45px;
+}
+
+}
+/* =========================
+   MES SERVICES
+========================= */
+
+.services {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.services h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.services-intro {
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+
+.services-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.service-card {
+    padding: 30px 20px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+}
+
+.service-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    line-height: 1.6;
+}
+
+/* Adaptation aux téléphones */
+@media (max-width: 600px) {
+
+    .services {
+        padding: 50px 15px;
+    }
+
+    .services h2 {
+        font-size: 30px;
+    }
+
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card {
+        padding: 25px 18px;
+    }
+}
